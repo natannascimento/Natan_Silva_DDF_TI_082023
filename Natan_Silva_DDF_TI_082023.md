@@ -16,8 +16,12 @@ A gestão de mudanças é o processo de preparar-se para qualquer nova mudança 
   Os chatbots podem melhorar a satisfação e o envolvimento do cliente de várias maneiras. Eles podem oferecer suporte ao cliente baseado em chatbot, experiências de usuário personalizadas, auxiliar os clientes na tomada de decisões, reduzir custos e otimizar recursos, coletar dados e fornecer insights diferenciados de dados de clientes.
 
 ## Case 5
-`SELECT * FROM user_emails WHERE created_at >= DATEADD(day, -30, GETDATE());
-`<br>
+```SQL
+SELECT id, name AS "Nome", email AS "Email", dt_criacao AS "Data de Criação"
+FROM user_emails
+WHERE dt_criacao >= DATEADD(day, -30, GETDATE());
+```
+<br>
 <br>
  Esta consulta seleciona todos os usuários da tabela “user_emails” que se cadastraram nos últimos 30 dias. A função “DATEADD” é usada para subtrair 30 dias da data atual (GETDATE) e a cláusula “WHERE” é usada para selecionar apenas os usuários que foram criados após essa data.
     
